@@ -1,0 +1,356 @@
+:root {
+  --primary: #04d6cf;
+  --dark-bg: #0d1117;
+  --light-text: #e6f1f1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: var(--dark-bg);
+  color: var(--light-text);
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-menu {
+  display: flex;
+  gap: 30px;
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 40px;
+  border: 1px solid rgba(174, 0, 255, 0.2);
+}
+.item-menu {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.item-menu:hover {
+  color: var(--primary);
+}
+.hero {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: #161b22;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.card:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.card-game-info {
+  padding: 20px;
+  text-align: center;
+  color: var(--light-text);
+}
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  max-width: 500px;
+  margin: 40px auto 0;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #30363d;
+  color: white;
+}
+.newsletter-form button {
+  padding: 15px 30px;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buy-button {
+  background: #00c853;
+  color: white;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+.buy-button:hover {
+  background: #00e676;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.buy-button:active {
+  transform: scale(0.98);
+}
+.contato-form {
+  width: 420px;
+  background: rgba(15, 15, 15, 0.95);
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  margin: auto;
+}
+
+.contato-form label {
+  color: #d4d4d4;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  background: #1b1b1b;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contato-form input::placeholder,
+.contato-form textarea::placeholder {
+  color: #777;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #00c853;
+  box-shadow: 0 0 12px rgba(0, 200, 83, 0.5);
+  background: #222;
+}
+
+.contato-form textarea {
+  resize: none;
+}
+
+.contato-form button {
+  margin-top: 10px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00c853, #00e676);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 18px rgba(0, 200, 83, 0.4);
+}
+
+.contato-form button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 230, 118, 0.6);
+}
+
+.contato-form button:active {
+  transform: scale(0.98);
+}
+.footer {
+  background: #0d1117;
+  color: white;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: flex-end; /* joga tudo para a direita */
+  align-items: flex-start;
+  gap: 80px;
+
+  padding: 60px 0;
+  border-top: 1px solid #222;
+}
+
+/* bloco principal alinhado à direita */
+.footer-brand,
+.footer-social {
+  text-align: right;
+}
+
+/* título mais estiloso */
+.footer-brand h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #00e676;
+  letter-spacing: 1px;
+}
+
+.footer-brand p {
+  white-space: nowrap;
+  max-width: 600px;  /* aumenta a largura */
+}
+
+/* redes sociais */
+.footer-social h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-social p {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.footer-social i {
+  font-size: 26px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-social i:hover {
+  color: #00e676;
+  transform: translateY(-4px) scale(1.1);
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.6);
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+  }
+}
+.page {
+    width: 100%;
+    height: 100vh; /* ocupa a tela toda */
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+
+    background-color: #0d1117;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Inputs */
+.form-control {
+    background-color: #000;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.form-control:focus {
+    background-color: #000;
+    color: #fff;
+    border-color: #666;
+    box-shadow: none;
+}
+
+.form-floating label {
+    color: #aaa;
+}
+
+/* Checkbox */
+.form-check-label {
+    color: #bbb;
+}
+
+/* Botão */
+.btn-primary {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #ddd;
+    color: #000;
+}
